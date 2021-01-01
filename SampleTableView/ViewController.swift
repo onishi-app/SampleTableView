@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let item = ["Cell 1", "Cell 2", "Cell 3", "Cell 4", "Cell 5"]
+    let item = ["Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1Cell 1", "Cell 2", "Cell 3", "Cell 4", "Cell 5"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +30,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
         cell.content.text = self.item[indexPath.row]
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
     }
 }
 
