@@ -77,6 +77,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = storyboard?.instantiateViewController(identifier: "detailView") as! DetailViewController
+        
+        detailVC.name = (item[indexPath.row]["name"] as! String)
+        detailVC.content = (item[indexPath.row]["content"] as! String)
+        detailVC.time = "2021年1月1日"
+        detailVC.retweet = 10000
+        detailVC.quoteRetweet = 10000
+        detailVC.good = 123456
+        
         navigationController?.pushViewController(detailVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
