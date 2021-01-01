@@ -67,7 +67,6 @@ class DetailViewController: UIViewController,UITableViewDelegate, UITableViewDat
             cell.name.text = name
             cell.time.text = time
             cell.content.text = content
-            print(count)
             return cell
         }
     }
