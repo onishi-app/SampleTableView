@@ -15,6 +15,7 @@
 		779DD34F259EA59800D5C54E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779DD34D259EA59800D5C54E /* LaunchScreen.storyboard */; };
 		779DD35A259EB7A700D5C54E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779DD358259EB7A700D5C54E /* CustomTableViewCell.swift */; };
 		779DD35B259EB7A700D5C54E /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779DD359259EB7A700D5C54E /* CustomTableViewCell.xib */; };
+		779DD35E259F354600D5C54E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779DD35D259F354600D5C54E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		779DD350259EA59800D5C54E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		779DD358259EB7A700D5C54E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		779DD359259EB7A700D5C54E /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		779DD35D259F354600D5C54E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				779DD342259EA59300D5C54E /* AppDelegate.swift */,
 				779DD344259EA59300D5C54E /* SceneDelegate.swift */,
 				779DD346259EA59300D5C54E /* ViewController.swift */,
+				779DD35D259F354600D5C54E /* DetailViewController.swift */,
 				779DD348259EA59300D5C54E /* Main.storyboard */,
 				779DD34B259EA59800D5C54E /* Assets.xcassets */,
 				779DD34D259EA59800D5C54E /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				779DD347259EA59300D5C54E /* ViewController.swift in Sources */,
 				779DD343259EA59300D5C54E /* AppDelegate.swift in Sources */,
+				779DD35E259F354600D5C54E /* DetailViewController.swift in Sources */,
 				779DD35A259EB7A700D5C54E /* CustomTableViewCell.swift in Sources */,
 				779DD345259EA59300D5C54E /* SceneDelegate.swift in Sources */,
 			);
