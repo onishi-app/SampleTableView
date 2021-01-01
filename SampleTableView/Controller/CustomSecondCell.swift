@@ -43,5 +43,5 @@ class CustomSecondCell: UITableViewCell {
         retweet.setTitle(retweetResult, for: .normal)
         quoteRetweet.setTitle(quoteRetweetResult, for: .normal)
     }
-    
+
 }

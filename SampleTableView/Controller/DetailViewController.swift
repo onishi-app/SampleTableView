@@ -18,7 +18,6 @@ class DetailViewController: UIViewController,UITableViewDelegate, UITableViewDat
     var quoteRetweet = 0.0
     var good = 0.0
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

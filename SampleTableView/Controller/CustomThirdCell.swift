@@ -23,13 +23,11 @@ class CustomThirdCell: UITableViewCell {
         
         if goodCount >= 10000 {
             goodCount /= 10000
-            print(goodCount)
             goodCount = floor(goodCount * 10) / 10
             goodResult = String("\(goodCount)万")
         } else {
             goodResult = String(goodCount)
         }
-        print(goodCount)
         good.setTitle(goodResult, for: .normal)
         
     }

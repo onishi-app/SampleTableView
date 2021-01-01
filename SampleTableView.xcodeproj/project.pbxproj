@@ -78,26 +78,50 @@
 		779DD341259EA59300D5C54E /* SampleTableView */ = {
 			isa = PBXGroup;
 			children = (
+				779DD378259FDEAB00D5C54E /* Model */,
+				779DD377259FDEA700D5C54E /* View */,
+				779DD376259FDE9B00D5C54E /* Controller */,
+				779DD350259EA59800D5C54E /* Info.plist */,
+			);
+			path = SampleTableView;
+			sourceTree = "<group>";
+		};
+		779DD376259FDE9B00D5C54E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				779DD342259EA59300D5C54E /* AppDelegate.swift */,
 				779DD344259EA59300D5C54E /* SceneDelegate.swift */,
 				779DD346259EA59300D5C54E /* ViewController.swift */,
 				779DD35D259F354600D5C54E /* DetailViewController.swift */,
+				779DD358259EB7A700D5C54E /* CustomTableViewCell.swift */,
+				779DD361259F51F900D5C54E /* CustomFirstCell.swift */,
+				779DD366259F541B00D5C54E /* CustomSecondCell.swift */,
+				779DD36B259F57AC00D5C54E /* CustomThirdCell.swift */,
+				779DD370259F587600D5C54E /* CustomFourthCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		779DD377259FDEA700D5C54E /* View */ = {
+			isa = PBXGroup;
+			children = (
 				779DD348259EA59300D5C54E /* Main.storyboard */,
 				779DD34B259EA59800D5C54E /* Assets.xcassets */,
 				779DD34D259EA59800D5C54E /* LaunchScreen.storyboard */,
-				779DD350259EA59800D5C54E /* Info.plist */,
-				779DD358259EB7A700D5C54E /* CustomTableViewCell.swift */,
 				779DD359259EB7A700D5C54E /* CustomTableViewCell.xib */,
-				779DD361259F51F900D5C54E /* CustomFirstCell.swift */,
 				779DD362259F51F900D5C54E /* CustomFirstCell.xib */,
-				779DD366259F541B00D5C54E /* CustomSecondCell.swift */,
 				779DD367259F541B00D5C54E /* CustomSecondCell.xib */,
-				779DD36B259F57AC00D5C54E /* CustomThirdCell.swift */,
 				779DD36C259F57AC00D5C54E /* CustomThirdCell.xib */,
-				779DD370259F587600D5C54E /* CustomFourthCell.swift */,
 				779DD371259F587600D5C54E /* CustomFourthCell.xib */,
 			);
-			path = SampleTableView;
+			path = View;
+			sourceTree = "<group>";
+		};
+		779DD378259FDEAB00D5C54E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
