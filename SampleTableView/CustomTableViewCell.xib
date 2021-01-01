@@ -38,13 +38,16 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0z-au-z8C">
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0z-au-z8C">
                         <rect key="frame" x="50" y="97" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="22" id="p8O-hb-Vdy"/>
                             <constraint firstAttribute="height" constant="22" id="zJI-lP-ZKY"/>
                         </constraints>
                         <state key="normal" image="message" catalog="system"/>
+                        <connections>
+                            <action selector="actionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1C1-Qg-uwm"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hj7-YD-GjM">
                         <rect key="frame" x="276" y="16" width="65" height="18"/>
@@ -56,29 +59,38 @@
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBb-SQ-tNZ">
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBb-SQ-tNZ">
                         <rect key="frame" x="136" y="97" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="39g-14-JKz"/>
                             <constraint firstAttribute="width" constant="22" id="n7m-rR-Lxl"/>
                         </constraints>
                         <state key="normal" image="arrow.rectanglepath" catalog="system"/>
+                        <connections>
+                            <action selector="actionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xfU-36-dtA"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyh-Yd-m6Q">
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyh-Yd-m6Q">
                         <rect key="frame" x="226" y="97" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="22" id="DU1-XO-4RH"/>
                             <constraint firstAttribute="height" constant="22" id="ZUj-t8-mpG"/>
                         </constraints>
                         <state key="normal" image="heart" catalog="system"/>
+                        <connections>
+                            <action selector="actionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2Jh-xH-1Qg"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnP-YB-3tV">
+                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnP-YB-3tV">
                         <rect key="frame" x="307" y="96" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="Gco-IX-5Ul"/>
                             <constraint firstAttribute="width" constant="22" id="Vse-DV-oH1"/>
                         </constraints>
                         <state key="normal" image="square.and.arrow.down" catalog="system"/>
+                        <connections>
+                            <action selector="actionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AIb-Wy-ESo"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

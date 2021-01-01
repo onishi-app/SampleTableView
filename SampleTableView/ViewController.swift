@@ -26,6 +26,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
+        item = item.reversed()
+        
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
 
         view.addSubview(tableView)
@@ -64,7 +66,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
         let now = Date().timeIntervalSince1970
-        item = item.reversed()
         
         let past = item[indexPath.row]["date"] as! TimeInterval
         cell.time.text = timeCheck(now: now, past: past)

@@ -22,4 +22,23 @@ class CustomTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    @IBAction func actionButton(_ sender: Any) {
+        guard let button = sender as? UIButton else {
+            return
+        }
+        
+        switch button.tag {
+        case 1:
+            print("リプライボタンが押されました。")
+        case 2:
+            print("リツイートボタンが押されました。")
+        case 3:
+            print("いいねボタンが押されました。")
+        case 4:
+            print("共有ボタンが押されました。")
+        default:
+            print("Error:どのボタンが押されたかわかりません。")
+        }
+    }
 }
