@@ -9,7 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
-    var reply: [Int] = []
+    var reply: [TweetModel] = []
     var count = 0
     var name = ""
     var content = ""
@@ -64,9 +64,12 @@ class DetailViewController: UIViewController,UITableViewDelegate, UITableViewDat
         default:
             tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
             let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
-            cell.name.text = name
-            cell.time.text = time
-            cell.content.text = content
+            let past = reply[count - 4].time
+            let now = Date().timeIntervalSince1970
+            cell.name.text = reply[count - 4].name
+            cell.time.text = reply[count - 4].timeCheck(now: now, past: past)
+            cell.content.text = reply[count - 4].content
+            count += 1
             return cell
         }
     }

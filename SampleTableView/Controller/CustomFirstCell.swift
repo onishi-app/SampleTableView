@@ -21,4 +21,7 @@ class CustomFirstCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    @IBAction func optionButton(_ sender: Any) {
+        print("オプションボタンが押されました。")
+    }
 }

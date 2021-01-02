@@ -41,4 +41,8 @@ class CustomTableViewCell: UITableViewCell {
             print("Error:どのボタンが押されたかわかりません。")
         }
     }
+    
+    @IBAction func optionButton(_ sender: Any) {
+        print("オプションボタンが押されました。")
+    }
 }

@@ -18,7 +18,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="b0O-kD-dph"/>
+                    <navigationItem key="navigationItem" id="b0O-kD-dph">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="r33-l7-MvG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="m9h-QM-mxu">
+                                <rect key="frame" x="184" y="296" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="test:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EkZ-Dp-ejH"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="YyU-G7-SvP" kind="show" id="8Jc-or-1ov"/>
                     </connections>
