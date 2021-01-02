@@ -21,7 +21,8 @@ class DetailViewController: UIViewController,UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tableView = UITableView(frame: self.view.bounds, style: .plain)
+        let tableView = UITableView(frame: self.view.bounds, style: .grouped)
+        tableView.sectionHeaderHeight = 0.1
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -68,5 +69,9 @@ class DetailViewController: UIViewController,UITableViewDelegate, UITableViewDat
             cell.content.text = content
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
     }
 }

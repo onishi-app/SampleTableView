@@ -24,6 +24,7 @@
 		779DD36E259F57AC00D5C54E /* CustomThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779DD36C259F57AC00D5C54E /* CustomThirdCell.xib */; };
 		779DD372259F587600D5C54E /* CustomFourthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779DD370259F587600D5C54E /* CustomFourthCell.swift */; };
 		779DD373259F587600D5C54E /* CustomFourthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779DD371259F587600D5C54E /* CustomFourthCell.xib */; };
+		779DD37B259FE0B000D5C54E /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779DD37A259FE0B000D5C54E /* TweetModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		779DD36C259F57AC00D5C54E /* CustomThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomThirdCell.xib; sourceTree = "<group>"; };
 		779DD370259F587600D5C54E /* CustomFourthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFourthCell.swift; sourceTree = "<group>"; };
 		779DD371259F587600D5C54E /* CustomFourthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomFourthCell.xib; sourceTree = "<group>"; };
+		779DD37A259FE0B000D5C54E /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		779DD378259FDEAB00D5C54E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				779DD37A259FE0B000D5C54E /* TweetModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				779DD347259EA59300D5C54E /* ViewController.swift in Sources */,
+				779DD37B259FE0B000D5C54E /* TweetModel.swift in Sources */,
 				779DD363259F51F900D5C54E /* CustomFirstCell.swift in Sources */,
 				779DD343259EA59300D5C54E /* AppDelegate.swift in Sources */,
 				779DD372259F587600D5C54E /* CustomFourthCell.swift in Sources */,

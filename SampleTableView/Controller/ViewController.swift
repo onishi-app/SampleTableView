@@ -9,24 +9,26 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var item = [
-        ["content": "2020年\nが\n終わります。\n今年も\n良い\n一年\nでした。", "date": Date().timeIntervalSince1970 - 313123123, "name": "斎藤"],
-        ["content": "良いお年をお過ごしください。", "date": Date().timeIntervalSince1970 - 123212312, "name": "本田"],
-        ["content": "新年明けましておめでとうございます。", "date": Date().timeIntervalSince1970 - 20000000, "name": "鈴木"],
-        ["content": "お年玉を1万円あげます。", "date": Date().timeIntervalSince1970 - 2323232, "name": "川崎"],
-        ["content": "2021年はもっと勉強を頑張ります。", "date": Date().timeIntervalSince1970 - 13213, "name": "三菱"],
-        ["content": "今年は本厄なので気を引き締めます。", "date": Date().timeIntervalSince1970 - 3333, "name": "豊田"],
-        ["content": "今年もよろしくお願いします。", "date": Date().timeIntervalSince1970 - 10, "name": "武田"]
+    var tweetArray = [
+        TweetModel(name: "山田一郎", content: "今日はいい天気です。午前中に洗濯を干したいと思います。", time: Date().timeIntervalSince1970 - 12345678, good: 10, retweet: 2, quoteRetweet: 1),
+        TweetModel(name: "山田二郎", content: "おはようございます。", time: Date().timeIntervalSince1970 - 1234567, good: 1000, retweet: 10, quoteRetweet: 7),
+        TweetModel(name: "山田三郎", content: "朝ごはんは目玉焼きとパンです。", time: Date().timeIntervalSince1970 - 123456, good: 20392, retweet: 1232, quoteRetweet: 1221),
+        TweetModel(name: "佐藤健", content: "映画「るろうに剣心」よろしくお願いします。", time: Date().timeIntervalSince1970 - 12345, good: 100022, retweet: 12911, quoteRetweet: 1292),
+        TweetModel(name: "新垣結衣", content: "逃げるは恥だが役にたつ", time: Date().timeIntervalSince1970 - 1234, good: 1212121, retweet: 21321, quoteRetweet: 12131),
+        TweetModel(name: "夏目漱石", content: "吾輩は猫である", time: Date().timeIntervalSince1970 - 123, good: 1200, retweet: 12, quoteRetweet: 12),
+        TweetModel(name: "李朴", content: "なるべくしてなっている", time: Date().timeIntervalSince1970 - 12, good: 2112, retweet: 2112, quoteRetweet: 2112),
+        TweetModel(name: "呉鳳明", content: "すりつぶせ", time: Date().timeIntervalSince1970 - 1, good: 1000000, retweet: 100000, quoteRetweet: 100000)
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tableView = UITableView(frame: self.view.bounds, style: .plain)
+        let tableView = UITableView(frame: self.view.bounds, style: .grouped)
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        item = item.reversed()
+        tweetArray.reverse()
+        tableView.sectionHeaderHeight = 0.1
         
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
 
@@ -60,33 +62,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return item.count
+        return tweetArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
         let now = Date().timeIntervalSince1970
-        
-        let past = item[indexPath.row]["date"] as! TimeInterval
+        let past = tweetArray[indexPath.row].time
         cell.time.text = timeCheck(now: now, past: past)
-        cell.content.text = (item[indexPath.row]["content"] as! String)
-        cell.name.text = (item[indexPath.row]["name"] as! String)
+        cell.content.text = tweetArray[indexPath.row].content
+        cell.name.text = tweetArray[indexPath.row].name
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = storyboard?.instantiateViewController(identifier: "detailView") as! DetailViewController
+        let time = tweetArray[indexPath.row].time
         
-        detailVC.name = (item[indexPath.row]["name"] as! String)
-        detailVC.content = (item[indexPath.row]["content"] as! String)
-        detailVC.time = "2021年1月1日"
-        detailVC.retweet = 10000
-        detailVC.quoteRetweet = 10000
-        detailVC.good = 123456
+        detailVC.name = tweetArray[indexPath.row].name
+        detailVC.content = tweetArray[indexPath.row].content
+        detailVC.time = tweetArray[indexPath.row].chengeDateFormatter(time: time)
+        detailVC.retweet = tweetArray[indexPath.row].retweet
+        detailVC.quoteRetweet = tweetArray[indexPath.row].quoteRetweet
+        detailVC.good = tweetArray[indexPath.row].good
         
         navigationController?.pushViewController(detailVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
     }
 }
 

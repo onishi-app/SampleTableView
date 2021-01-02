@@ -26,7 +26,7 @@ class CustomThirdCell: UITableViewCell {
             goodCount = floor(goodCount * 10) / 10
             goodResult = String("\(goodCount)万")
         } else {
-            goodResult = String(goodCount)
+            goodResult = String(Int(goodCount))
         }
         good.setTitle(goodResult, for: .normal)
         

@@ -29,7 +29,7 @@ class CustomSecondCell: UITableViewCell {
             retweetCount = floor(retweetCount * 10) / 10
             retweetResult = String("\(retweetCount)万")
         } else {
-            retweetResult = String(retweetCount)
+            retweetResult = String(Int(retweetCount))
         }
         
         if quoteRetweetCount >= 10000 {
@@ -37,7 +37,7 @@ class CustomSecondCell: UITableViewCell {
             quoteRetweetCount = floor(quoteRetweetCount * 10) / 10
             quoteRetweetResult = String("\(quoteRetweetCount)万")
         } else {
-            quoteRetweetResult = String(quoteRetweetCount)
+            quoteRetweetResult = String(Int(quoteRetweetCount))
         }
         
         retweet.setTitle(retweetResult, for: .normal)
